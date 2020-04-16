@@ -189,7 +189,7 @@ input{
     float:left;
     width:33%;
     height:50%;
-    overflow: auto;
+    overflow: scroll;
 }
 .repertrytitle{
     height:5vh;
