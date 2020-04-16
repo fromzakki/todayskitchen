@@ -1,0 +1,208 @@
+html{
+    background-color: #cfa972;
+    height:100%;
+    font-family:Yu Gothic;
+}
+body{
+    margin:0px;
+    width:100%;
+    height:100%;
+}
+img{
+    width:100%;
+    height:100%;
+}
+#close{
+    float:right;
+    width:90px;
+}
+.popupmenu{
+    width:320px;
+    height:100%;
+    margin:0;
+    padding:0;
+    background-color: #fbc493;
+}
+    .popupmenu li{
+        width:100%;
+        height:100px;
+        vertical-align: top;
+        border-bottom:solid 1px;
+    }
+    
+#menuappear{
+    width:320px;
+    height:100%;
+    display: none;
+    position:fixed;
+    margin:0;
+    padding:0;
+}
+header{
+    width:100%;
+    height:90px;
+}
+.menuimage{
+    float:left;
+    width:90px;
+    margin-right:0;
+    margin-left:0;
+}
+#title{
+    width:70vw;
+    height:100%;
+    background-color: #c65d00;
+}
+main{
+    width:100%;
+    height:600px;
+}
+#search{
+    display:flex;
+    justify-content:center;
+    padding-top:1vw;
+}
+#search div{
+    width:83vw;
+    height:5vh;
+}
+#kanseihin{
+    display:flex;
+    justify-content:center;
+    padding-top:2vw;
+    width:100%;
+    height:25vh;
+}
+p{
+    display:inline;
+}
+#recipe{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding-top:2vw;
+    height:50vh;
+    background-image: url(background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainmenu{
+    height:40vw;
+    width:80%;
+}
+footer{
+    height:70px;
+    position: relative;
+    bottom: 0;
+}
+#koukoku{
+    text-align: justify;
+    display:flex;
+}
+
+/*append.html*/
+.button {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    transition: .4s;
+  }
+  .button:hover {
+    color:#ff7f7f;
+  }
+  .button:before, button:after {
+    position: absolute;
+    top: 0;
+    content:'';
+    width: 8px;
+    height: 100%;
+    display: inline-block;
+  }
+  .button:before {
+    border-left: solid 1px #ff7f7f;
+    border-top: solid 1px #ff7f7f;
+    border-bottom: solid 1px #ff7f7f;
+    left: 0;
+  }
+  .button:after {
+    content: '';
+    border-top: solid 1px #ff7f7f;
+    border-right: solid 1px #ff7f7f;
+    border-bottom: solid 1px #ff7f7f;
+    right: 0;
+  }
+#repertry{
+    margin:0,auto;
+    padding:0,auto;
+}
+#scroll{
+    display:block;
+    height:380px;
+    overflow-y: scroll;
+    border-bottom: 0px;
+    text-align: justify;
+    background-color: lightsalmon;
+}
+::-webkit-scrollbar{
+    width:0;
+}
+.input{
+    padding:1vh;
+}
+input{
+    border-style: outset;
+    border-radius: 5vw;
+    border-width: 1px;
+    font-family : inherit;
+    font-size : 100%;
+    background-color: bisque;
+    color:olive;
+}
+.a{
+    width:60%;
+    height:4vh;
+    border-style: hidden;
+    background-color: lightcoral;
+    text-align: center;
+}
+.b{
+    width:15%;
+}
+#menuname{
+    height:30px;
+    border-style: solid;
+}
+#addbutton{
+    width:10%;
+    display:block;
+    float:right;
+}
+#append{
+    float:right;
+    margin-right:6vw;
+    height:30px;
+    width:60px;
+}
+#insert{
+    width:100%;
+    height: 50vh;
+    overflow: visible;
+}
+.lists{
+    float:left;
+    width:33%;
+    height:50%;
+    overflow: auto;
+}
+.repertrytitle{
+    font-size: 3vh;
+    border-bottom-style: solid;
+    border-bottom-color: lightslategray;
+    text-align: center;
+    word-break: break-all;
+}
+.ingredients{
+    height:1vh;
+    font-size: 2vh;
+}

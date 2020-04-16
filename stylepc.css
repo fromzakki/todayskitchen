@@ -1,0 +1,184 @@
+html{
+    background-color: #cfa972;
+    height:100%;
+}
+body{
+    margin:0px;
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+}
+img{
+    width:100%;
+    height:100%;
+}
+#close{
+    float:right;
+    width:10vw;
+}
+.popupmenu{
+    width:800px;
+    height:100%;
+    margin:0;
+    padding:0;
+    background-color: #fbc493;
+}
+    .popupmenu li{
+        width:100%;
+        height:12vh;
+        vertical-align: top;
+        border-bottom:solid 1px;
+    }
+    
+#menuappear{
+    width:800px;
+    height:100%;
+    display: none;
+    position:fixed;
+    margin:0;
+    padding:0;
+}
+header{
+    width:1500px;
+    margin-left:auto;
+    margin-right:auto;
+    height:150px;
+}
+.menuimage{
+    float:left;
+    width:100px;
+    margin-right:5vw;
+    margin-left:2vw;
+}
+
+
+#title{
+    width:70vw;
+    height:100%;
+    background-color: #c65d00;
+    margin-left: auto;
+}
+main{
+    width:100%;
+    height:700px;
+}
+#search{
+    display:flex;
+    justify-content:center;
+    padding-top:1vw;
+}
+#search div{
+    width:83vw;
+    height:5vh;
+}
+#kanseihin{
+    display:flex;
+    justify-content:center;
+    padding-top:2vw;
+    width:100%;
+    height:25vh;
+}
+p{
+    display:inline;
+}
+#recipe{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding-top:2vw;
+    height:50vh;
+    background-image: url(background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.mainmenu{
+    height:40vw;
+    width:80%;
+}
+footer{
+    height:8vh;
+    position: relative;
+    bottom: 0;
+}
+#koukoku{
+    text-align: justify;
+    display:flex;
+    background-image: url();
+
+}
+
+/*append.html*/
+#repertry{
+    margin:0,auto;
+    padding:0,auto;
+}
+#scroll{
+    display:block;
+    height:50vh;
+    overflow-y: scroll;
+    border-bottom: 0px;
+    text-align: justify;
+    background-color: lightsalmon;
+}
+::-webkit-scrollbar{
+    width:0;
+}
+.input{
+    padding:1vh;
+}
+input{
+    border-style: outset;
+    border-radius: 5vw;
+    border-width: 1px;
+    font-family : inherit;
+    font-size : 100%;
+    background-color: bisque;
+    color:olive;
+}
+.a{
+    width:60%;
+    height:4vh;
+    border-style: hidden;
+    background-color: lightcoral;
+    text-align: center;
+}
+.b{
+    width:15%;
+}
+#menuname{
+    height:30px;
+    border-style: solid;
+}
+#addbutton{
+    width:10%;
+    display:block;
+    float:right;
+}
+#append{
+    float:right;
+    margin-right:6vw;
+    height:30px;
+    width:60px;
+}
+#insert{
+    width:100%;
+    height: 50vh;
+    overflow: scroll;
+}
+.lists{
+    float:left;
+    width:33%;
+    height:50%;
+    overflow: auto;
+}
+.repertrytitle{
+    height:6vh;
+    font-size: 5vh;
+    border-bottom-style: solid;
+    border-bottom-color: lightslategray;
+    text-align: center;
+    word-break: break-all;
+}
+.ingredients{
+    font-size: 3vh;
+    overflow: scroll;
+}

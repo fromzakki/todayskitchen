@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <title>レシピの登録</title>
+    <meta charset="UTF-8">
+    <link href="stylesmart.css" media="(max-width:750px)" rel="stylesheet" type="text/css">
+    <link href="stylepc.css" media="(min-width:751px)" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="menuappear" >
+        <ul class="popupmenu">
+            <li><a href="#"><img src="menuclose.gif" id="close"></a></li><!--メニューをポップアップで閉じるためのボタンの画像-->
+            <li><a href="index.html">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="toppc.gif">
+                    <img src="topsmart.gif">
+            </picture></a></li>
+            <li><a href="#">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="editmenupc.gif">
+                    <img src="editmenusmart.gif">
+            </picture></a></li>
+            <li><a href="info.html">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="contactpc.gif">
+                    <img src="contactsmart.gif">
+            </picture></a></li>
+        </ul>
+    </div>
+        <header>
+            <img id="title" src="title.gif"><!--タイトルロゴ画像-->
+            <a href="#"><img class="menuimage" src="menuopen.gif" id="popup"></a>
+        </header>
+<h1>レシピの登録</h1>
+<div id="repertry">
+    <input type="text" placeholder="料理の名前" id="menuname" value="">
+    <input type="button" class="button" id="addbutton" value="add">
+    <div id="scroll">
+     <div id="add">
+        <div class="input">
+        <input type="text" placeholder="食材または調味料"  name="a" class="a" value="">
+        <input type="number" placeholder="量" name="a" class="a b" value="">
+        <input type="text" placeholder="単位" name="a" class="a b" value="">
+        </div>
+     </div>
+    </div>
+</div>
+    <input type="button" class="button" value="OK!" id="append">
+<h2>一覧</h2><input type="button" value="all clear" onclick="localStorage.clear(),location.reload();">
+    <div id="insert"></div>
+    <!--formのデータを受け取って番号をつけて行ってそれを表形式か羅列形式で表示する。-->
+    <footer>
+        <picture>
+            <source media="(min-width: 751px)" srcset="footerpc.gif">
+            <img src="footersmart.gif" id="koukoku">
+        </picture><!--広告リンクをつけた画像（看板的に扱い、初期はノート投げ銭に誘導）--></footer>
+    <script type="text/javascript" src='kanri.js'>
+</script>
+<script type="text/javascript" >
+    if(0<data.length){
+    for(let e =0;e<data.length;e++){
+        let res=JSON.parse(data.getItem(e));
+            let text1=`<input type='button' value='clear' class='reject' id='number`+e+`' onclick="sakujo(this.id);">
+            <div class="repertrytitle">`+res['メニュー名']+`</div>`;
+            let text2=""
+            for(var test=0;test<res["食材"].length;test++){
+                text2+=
+                `<div class="ingredients">` +res["食材"][test]+"　"+parseInt(res["量"][test])+res["単位"][test]+ `</div>`};
+        document.getElementById("insert").insertAdjacentHTML('beforeend',`<div class="lists">`+text1+text2+`</div>`);
+    }}
+        document.getElementById("addbutton").onclick = function(){
+        document.getElementById("add").insertAdjacentHTML('beforeend',
+        `
+    <div class="input">
+    <input type="text" placeholder="食材または調味料" name="a" class="a" value="">
+    <input type="number" placeholder="量" name="a" class="a b" value="">
+    <input type="text" placeholder="単位" name="a" class="a b" value="">
+    </div>    `);
+    }//追加ボタンを押すと項目を追加する
+    function sakujo(id){
+        let sakujo=parseInt(id.split('number').join(''));
+        sakujo=data.removeItem(sakujo);
+        location.reload(false);
+    }
+    
+    
+    let input={};
+    document.getElementById("append").onclick=function(){
+        let repertrytitle=document.getElementById('menuname');
+        input['メニュー名']=repertrytitle.value
+            let array0=[];
+            let array1=[];
+            let array2=[];
+            let newmenu=document.getElementsByName('a');
+            newmenu=Array.from(newmenu);
+            for(let i=0;i<newmenu.length;i++){
+                if(i%3==0){
+                    ingredients=newmenu.slice(i)
+                    array0.push(ingredients[0].value);
+                    array1.push(ingredients[1].value);
+                    array2.push(ingredients[2].value);}
+                };
+            input["食材"]=array0
+            input["量"]=array1
+            input["単位"]=array2
+        data.setItem(data.length++,JSON.stringify(input));
+        location.reload();
+        }
+        
+        
+
+        /*登録を押すと各項目を変数に格納して別の関数を呼び出し、一覧のゾーンにｈｔｍｌテキストを書き込む。
+        書き込んだ新しいものに独自のkey（漸化）を与えて、ローカルストレージに追加
+        逆順let i=newmenu.length - 1;i>=0;i--*/
+    //覚えさせた表を消さないようにしといてそれを読んできて別ページに出せるようにしたい
+</script>
+<!--submitをきっかけにデータを変数に格納していこうとすると書いていたデータがどっかに飛んでいくのでbuttonで処理することにした-->
+    <!--からの表をいくつか作ってそこにデータを入れる。入れたらtdを追加する。配列を作って列ごとに格納先ｔ-->
+</body>
+</html>
