@@ -199,6 +199,6 @@ input{
     word-break: break-all;
 }
 .ingredients{
-    height:1vh;
     font-size: 2vh;
+    overflow: scroll;
 }
