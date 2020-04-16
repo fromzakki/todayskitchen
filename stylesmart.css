@@ -92,6 +92,8 @@ p{
 }
 footer{
     height:70px;
+    possition:absolute;
+    bottom:0;
 }
 #koukoku{
     text-align: justify;
