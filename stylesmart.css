@@ -192,13 +192,15 @@ input{
     overflow: auto;
 }
 .repertrytitle{
-    font-size: 3vh;
+    height:5vh;
+    font-size: 4vh;
     border-bottom-style: solid;
     border-bottom-color: lightslategray;
     text-align: center;
     word-break: break-all;
 }
 .ingredients{
+    display:block;
     font-size: 2vh;
     overflow: scroll;
 }
