@@ -55,9 +55,12 @@
     <script type="text/javascript" src="kanri.js">
     </script>
     <script type="text/javascript">
-    
-    let now=Math.floor(Math.random()*data.length);
-     if(0<data.length){
+    let m=Object.keys(data)
+    let max=Math.max.apply(null,m)+1
+    let now=Math.floor(Math.random()*max);
+    while(data.getItem(now)==null){now=Math.floor(Math.random()*max);}
+    console.log(now)
+    if(0<data.length){
         let res=JSON.parse(data.getItem(now));
             let text1=`<div class="repertrytitle">`+res['メニュー名']+`</div>`;
             let text2=""
