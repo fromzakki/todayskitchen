@@ -62,8 +62,10 @@
             let text1=`<div class="repertrytitle">`+res['メニュー名']+`</div>`;
             let text2=""
             for(var test=0;test<res["食材"].length;test++){
+                let nom =parseInt(res["量"][test])
+                if(Number.isNaN(parseInt(res["量"][test]))){nom="　"}
                 text2+=
-                `<div class="ingredients">` +res["食材"][test]+"　　"+parseInt(res["量"][test])+"　　"+res["単位"][test]+ `</div>`}; 
+                `<div class="ingredients">` +res["食材"][test]+"　　"+nom+"　　"+res["単位"][test]+ `</div>`}; 
         document.getElementById("recipe").insertAdjacentHTML('beforeend',`<div class="mainmenu">`+text1+text2+`</div>`);
     }
      function xpeople(){
