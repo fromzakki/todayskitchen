@@ -58,8 +58,12 @@
 </script>
 <script type="text/javascript" >
     if(0<data.length){
-    for(let e =0;e<data.length;e++){
+    let m=Object.keys(data)
+    console.log(m)
+    let max=Math.max.apply(null,m)
+    for(let e =0;e<max+1;e++){
         let res=JSON.parse(data.getItem(e));
+        if(res==null){continue;}
             let text1=`<input type='button' value='clear' class='reject' id='number`+e+`' onclick="sakujo(this.id);">
             <div class="repertrytitle">`+res['メニュー名']+`</div>`;
             let text2=""
@@ -69,7 +73,7 @@
                 text2+=
                 `<div class="ingredients">` +res["食材"][test]+"　"+nom+res["単位"][test]+ `</div>`};
         document.getElementById("insert").insertAdjacentHTML('beforeend',`<div class="lists">`+text1+text2+`</div>`);
-    }}
+    } }
         document.getElementById("addbutton").onclick = function(){
         document.getElementById("add").insertAdjacentHTML('beforeend',
         `
