@@ -55,11 +55,11 @@
     <script type="text/javascript" src="kanri.js">
     </script>
     <script type="text/javascript">
-   
+   let now="Global"
     if(0<data.length){
          let m=Object.keys(data)
         let max=Math.max.apply(null,m)+1
-        let now=Math.floor(Math.random()*max);
+            now=Math.floor(Math.random()*max);
         while(data.getItem(now)==null){now=Math.floor(Math.random()*max);}
         console.log(now)
         let res=JSON.parse(data.getItem(now));
