@@ -10,16 +10,27 @@
 <body>
     <div id="menuappear" >
         <ul class="popupmenu">
-            <li><a href="#"><img src="menuclose.png" id="close"></a></li><!--メニューをポップアップで閉じるためのボタンの画像-->
-            <li><a href="#"><img src="top.png"></a></li>
-            <li><a href="#"><img src="menulist.png"></a></li>
-            <li><a href="append.html"><img src="editmenu.png"></a></li>
+            <li><a href="#"><img src="menuclose.gif" id="close"></a></li><!--メニューをポップアップで閉じるためのボタンの画像-->
+            <li><a href="#">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="toppc.gif">
+                    <img src="topsmart.gif">
+            </picture></a></li>
+            <li><a href="append.html">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="editmenupc.gif">
+                    <img src="editmenusmart.gif">
+            </picture></a></li>
+            <li><a href="info.html">
+                <picture>
+                    <source media="(min-width: 751px)" srcset="contactpc.gif">
+                    <img src="contactsmart.gif">
+            </picture></a></li>
         </ul>
     </div>
         <header>
             <a href="#"><img class="menuimage" src="menuopen.png" id="popup"></a><!--メニューをポップアップで開くためのボタンの画像-->
             <img src="title.png"  id="title"><!--タイトルロゴ画像-->
-            
         </header>
         <main>
             <div id="search">
