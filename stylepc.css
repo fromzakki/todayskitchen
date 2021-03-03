@@ -1,5 +1,5 @@
 html{
-    background-color: #cfa972;
+    background-color:rgb(249, 223, 213);
     height:100%;
 }
 body{
@@ -16,11 +16,11 @@ img{
     width:10vw;
 }
 .popupmenu{
-    width:800px;
+    width:77vw;
     height:100%;
     margin:0;
     padding:0;
-    background-color: #fbc493;
+    background-color:rgb(243, 192, 171);
 }
     .popupmenu li{
         width:100%;
@@ -30,7 +30,7 @@ img{
     }
     
 #menuappear{
-    width:800px;
+    width:77vw;
     height:100%;
     display: none;
     position:fixed;
@@ -42,6 +42,7 @@ header{
     margin-left:auto;
     margin-right:auto;
     height:150px;
+    background-color:rgb(230, 133, 94);
 }
 .menuimage{
     float:left;
@@ -52,13 +53,11 @@ header{
 
 
 #title{
-    width:70vw;
+    width:1000px;
     height:100%;
-    background-color: #c65d00;
-    margin-left: auto;
 }
 main{
-    width:100%;
+    width:1500px;
     height:700px;
 }
 #search{
@@ -86,7 +85,7 @@ p{
     justify-content:center;
     padding-top:2vw;
     height:50vh;
-    background-image: url(background.gif);
+    background-image: url(background.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -96,9 +95,12 @@ p{
 }
 footer{
     height:8vh;
-    position: bottom;
-    bottom: 0;
+}
+#koukoku{
     text-align: justify;
+    display:flex;
+    background-image: url();
+
 }
 
 /*append.html*/
@@ -126,14 +128,14 @@ input{
     border-width: 1px;
     font-family : inherit;
     font-size : 100%;
-    background-color: bisque;
+    background-color: rgb(254, 247, 213);
     color:olive;
 }
 .a{
     width:60%;
     height:4vh;
     border-style: hidden;
-    background-color: lightcoral;
+    background-color: rgb(244, 210, 222);
     text-align: center;
 }
 .b{
@@ -157,24 +159,25 @@ input{
 #insert{
     width:100%;
     height: 50vh;
-    overflow: scroll;
+    overflow: visible;
 }
 .lists{
     float:left;
     width:33%;
     height:50%;
-    overflow: scroll;
+    overflow: auto;
 }
 .repertrytitle{
     height:6vh;
     font-size: 5vh;
     border-bottom-style: solid;
-    border-bottom-color: lightslategray;
+    border-bottom-color: rgb(191, 30, 86);
     text-align: center;
-    word-break: break-all;
 }
 .ingredients{
-    display:block;
+    display: block;
+    height:4vh;
     font-size: 3vh;
-    overflow: scroll;
+    display:inline-block;
+    margin:1px,3px;
 }
