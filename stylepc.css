@@ -80,7 +80,7 @@ p{
     display:inline;
 }
 #inp{
-    margin-left:30vw;
+    margin-left:20vw;
 }
 #recipe{
     width:100%;
@@ -88,7 +88,7 @@ p{
     justify-content:center;
     padding-top:2vw;
     height:50vh;
-    background-color:rgb(237, 161, 132);
+    background-color:rgb(249, 223, 213);
 }
 .mainmenu{
     height:40vw;
