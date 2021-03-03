@@ -1,71 +1,56 @@
 <!doctype html>
 <html>
 <head>
-    <title>Today's Kitchen</title>
+    <title>Today's kitchen</title>
     <meta charset="UTF-8">
-    <link href="stylesmart.css" media="screen and (max-device-width:750px)" rel="stylesheet" type="text/css" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link href="stylepc.css" media="screen and (min-device-width:751px)" rel="stylesheet" type="text/css" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link href="stylesmart.css" media="(max-width:750px)" rel="stylesheet" type="text/css">
+    <link href="stylepc.css" media="(min-width:751px)" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div id="menuappear" >
         <ul class="popupmenu">
-            <li><a href="#"><img src="menuclose.gif" id="close"></a></li><!--メニューをポップアップで閉じるためのボタンの画像-->
-            <li><a href="#">
-                <picture>
-                    <source media="(min-width: 751px)" srcset="toppc.gif">
-                    <img src="topsmart.gif">
-            </picture></a></li>
-            <li><a href="append.html">
-                <picture>
-                    <source media="(min-width: 751px)" srcset="editmenupc.gif">
-                    <img src="editmenusmart.gif">
-            </picture></a></li>
-            <li><a href="info.html">
-                <picture>
-                    <source media="(min-width: 751px)" srcset="contactpc.gif">
-                    <img src="contactsmart.gif">
-            </picture></a></li>
+            <li><a href="#"><img src="menuclose.png" id="close"></a></li><!--メニューをポップアップで閉じるためのボタンの画像-->
+            <li><a href="#"><img src="top.png"></a></li>
+            <li><a href="#"><img src="menulist.png"></a></li>
+            <li><a href="append.html"><img src="editmenu.png"></a></li>
         </ul>
     </div>
         <header>
-            <a href="#"><img class="menuimage" src="menuopen.gif" id="popup"></a><!--メニューをポップアップで開くためのボタンの画像-->
-            <img src="title.gif"  id="title"><!--タイトルロゴ画像-->
+            <a href="#"><img class="menuimage" src="menuopen.png" id="popup"></a><!--メニューをポップアップで開くためのボタンの画像-->
+            <img src="title.png"  id="title"><!--タイトルロゴ画像-->
             
         </header>
         <main>
+            <div id="search">
+                <form action="formdata.js" method="post" entype="text/plane">
+                    <input type="search"> <!--メニューを検索して結果を別ページに表示 検索窓もスタイリッシュに-->
+                </form>    
+            </div>
             <div id="kanseihin">
                 <p><b>本アプリの説明</b><br>現在時点では、メニューをローカルストレージに保存し、<br>それをランダムに表記することで<br>その日の献立を悩まずに決めることができます</p>
             </div><!--本日分の料理の参考画像を出す-->
-            <div>
-                <div id="inp">
-                    <input type="button"  onclick="location.reload();" value="別メニュー">
-                    <input type="number" placeholder="人数" id="xxx" value="">
-                    <input type="button"  onclick="xpeople();" value="人">
-                </div>
-                <div id="recipe">
+            <div id="inp">
+                <input type="button"  onclick="location.reload();" value="別メニュー">
+                <input type="number" placeholder="人数" id="xxx" value="">
+                <input type="button"  onclick="xpeople();" value="人">
+            </div>
+            <div id="recipe">
                 <!-- <iframe src="recipedata.html"></iframe> レシピをリスト化して表示-->
-                </div>
             </div>
         </main>
     <script type="text/javascript" src="kanri.js">
     </script>
     <script type="text/javascript">
-   let now=""
-    if(0<data.length){
-         let m=Object.keys(data)
-        let max=Math.max.apply(null,m)+1
-            now=Math.floor(Math.random()*max);
-        while(data.getItem(now)==null){now=Math.floor(Math.random()*max);}
-        console.log(now)
+    
+    let now=Math.floor(Math.random()*data.length);
+     if(0<data.length){
         let res=JSON.parse(data.getItem(now));
             let text1=`<div class="repertrytitle">`+res['メニュー名']+`</div>`;
             let text2=""
             for(var test=0;test<res["食材"].length;test++){
-                let nom =parseInt(res["量"][test])
-                if(Number.isNaN(parseInt(res["量"][test]))){nom="　"}
                 text2+=
-                `<div class="ingredients">` +res["食材"][test]+"　　"+nom+"　　"+res["単位"][test]+ `</div>`}; 
+                `<div class="ingredients">` +res["食材"][test]+"　　"+parseInt(res["量"][test])+"　　"+res["単位"][test]+ `</div>`}; 
         document.getElementById("recipe").insertAdjacentHTML('beforeend',`<div class="mainmenu">`+text1+text2+`</div>`);
     }
      function xpeople(){
