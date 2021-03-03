@@ -79,15 +79,16 @@ main{
 p{
     display:inline;
 }
+#inp{
+    margin-left:30vw;
+}
 #recipe{
     width:100%;
     display:flex;
     justify-content:center;
     padding-top:2vw;
     height:50vh;
-    background-image: url(background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color:rgb(237, 161, 132);
 }
 .mainmenu{
     height:40vw;
